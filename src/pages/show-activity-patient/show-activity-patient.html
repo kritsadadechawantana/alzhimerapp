@@ -1,0 +1,56 @@
+<!--
+  Generated template for the ShowActivityPatientPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>ระยะอาการของผู้ป่วย</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color: rgb(81, 117, 158)">
+  <div text-center color="light">
+    <h1> สรุปอาการ </h1>
+  </div>
+  <ion-col>
+    <ion-list *ngFor="let pr of data">
+      <ion-item>
+        <ion-label>เวลาบันทึกล่าสุด : {{ pr.date_data }} </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>อาการปวดหัว: {{ pr.list1 }} ครั้ง</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>อาการอาเจียน: {{ pr.list2 }} ครั้ง</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>ก้าวร้าว ดุดัน: {{ pr.list3 }} ครั้ง</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>ลืมชื่อ หรือ ลืมว่ากำลังทำอะไรอยู่: {{ pr.list4 }} ครั้ง</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>นอนไม่หลับ : {{ pr.list5 }} ครั้ง</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>ปัสสาวะราด: {{ pr.list6 }} ครั้ง</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>ทำร้ายตนเองหรือผู้อื่น : {{ pr.list7 }} ครั้ง</ion-label>
+      </ion-item>
+
+
+    </ion-list>
+  </ion-col>
+
+</ion-content>

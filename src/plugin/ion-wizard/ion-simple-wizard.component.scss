@@ -1,0 +1,25 @@
+ion-simple-wizard {
+    :host {
+      display: flex;
+      flex-direction: column;
+
+    }
+    .ion-wizard-footer {
+     position: fixed;
+
+    z-index: 100;
+    display: block;
+    right:0px;
+    top:14%;
+    }
+
+    .ion-wizard-header {
+      left: 0;
+      position: fixed;
+      z-index: 100;
+     text-align: center;
+     display: block;
+     width: 100%;
+     top: 50%;
+     }
+}

@@ -1,0 +1,27 @@
+page-sn1 {
+
+    .segment-button {
+        color: #fff !important;
+        font-size:20px !important;
+    
+        &.activated, &.segment-activated {
+          border-top: 0;
+          border-right: 0;
+          border-bottom: 3px solid white !important;
+          border-left: 0;
+          background: transparent !important;
+        }
+      }
+      .main{
+        font-size: 15px;
+        padding: 11px;
+    }
+    .name{
+      font-size: 15px;
+      text-align: center;
+    }
+    .content{
+      align-self: auto;
+      text-align: center;
+    }
+}

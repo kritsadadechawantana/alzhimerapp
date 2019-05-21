@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title> {{ getPost_Topic }} </ion-title>
+    <div *ngIf="type_Online==1">
+      <ion-buttons right (click)="del()">
+        <button ion-button icon-only clear color="light" [disabled]="bin!=id_Online">
+          <ion-icon ios="ios-trash-outline" md="md-trash"></ion-icon>
+        </button>
+      </ion-buttons>
+    </div>
+    <div *ngIf="type_Online==2">
+      <ion-buttons right (click)="del()">
+        <button ion-button icon-only clear color="light">
+          <ion-icon ios="ios-trash-outline" md="md-trash"></ion-icon>
+        </button>
+      </ion-buttons>
+    </div>
+  </ion-navbar> 
+</ion-header>
+
+
+<ion-content padding>
+  <ion-label class="head">
+    ชื่อเรื่อง : {{ getPost_Topic }}
+  </ion-label>
+  <p class="main">{{ getPost_Detail }}</p>
+  <br>
+  <h2 class="comment">ความคิดเห็น</h2>
+  <ion-list>
+    <ion-item *ngFor="let xs of items; let i=index">
+
+      <!-- <h2 class="commentSub">ความคิดเห็น {{i+1}}</h2> -->
+      <ion-row>
+        <ion-col col-12>
+          <ion-row>
+            <ion-col>
+              <h2 class="commentSub">ความคิดเห็น {{i+1}}</h2>
+            </ion-col>
+            <ion-col>
+              <div *ngIf="type_Online==1" >
+                <div class="bin">
+                  <button icon-only [disabled]="id_Online!=xs.id_patient" (click)="delComment(xs.id_comment)">
+                    <ion-icon ios="ios-trash-outline" md="md-trash" >
+                    </ion-icon>
+                  </button>
+                </div>
+              </div>
+              <div *ngIf="type_Online==2">
+                <div class="bin">
+                  <ion-icon ios="ios-trash-outline" md="md-trash" (click)="delComment(xs.id_comment)">
+                  </ion-icon>
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col col-12>
+          <h2 class="person">โดย {{xs.name_comment}}</h2>
+        </ion-col>
+      </ion-row>
+
+      <h2 class="sub"> {{ xs.comment_detail }} </h2>
+      <h2 class="date">บันทึกล่าสุด : {{ xs.date_comments }} เวลา  {{ xs.time_comments}} น.</h2>
+      <!-- <h2 class="date">id comment: {{ xs.id_comment }} </h2> -->
+
+
+    </ion-item>
+  </ion-list>
+  <div>
+    <h4>แสดงความคิดเห็น</h4>
+    <textarea name="" id="" cols="40" rows="5" placeholder="แสดงความคิดเห็น"
+      [(ngModel)]="userData.comment_detail"></textarea>
+    <div text-center>
+      <button ion-button full color="secondary" (click)="create()" class="send">ตอบคำถาม</button>
+      
+    </div>
+  </div>
+
+
+
+</ion-content>

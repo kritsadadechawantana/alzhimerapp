@@ -1,0 +1,7 @@
+{
+  "name": "dongdang",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,57 @@
+<!--
+  Generated template for the P2Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>บันทึกอาการ</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light" (click)="toCalendar()">
+        <ion-icon name="md-calendar"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding text-center style="background-color: rgb(81, 117, 158)">
+  <ion-item style="background-color: rgb(194, 224, 238)">
+    <ion-label>อาการปวดหัว</ion-label>
+    <ion-checkbox color="secondary" [(ngModel)]="userData.one"></ion-checkbox>
+  </ion-item>
+
+  <ion-item style="background-color: rgb(194, 224, 238)">
+    <ion-label>อาเจียน</ion-label>
+    <ion-checkbox color="secondary" [(ngModel)]="userData.two"></ion-checkbox>
+  </ion-item>
+  <ion-item style="background-color: rgb(194, 224, 238)">
+    <ion-label>ก้าวร้าว ดุดัน</ion-label>
+    <ion-checkbox color="secondary" [(ngModel)]="userData.tree"></ion-checkbox>
+  </ion-item>
+  <ion-item style="background-color: rgb(194, 224, 238)">
+    <ion-label>ลืมชื่อหรือลืมว่ากำลังทำอะไร</ion-label>
+    <ion-checkbox color="secondary" [(ngModel)]="userData.four"></ion-checkbox>
+  </ion-item>
+  <ion-item style="background-color: rgb(194, 224, 238)">
+    <ion-label>นอนไม่หลับ</ion-label>
+    <ion-checkbox color="secondary" [(ngModel)]="userData.five"></ion-checkbox>
+  </ion-item>
+  <ion-item style="background-color: rgb(194, 224, 238)">
+    <ion-label>ปัสสาวะราด</ion-label>
+    <ion-checkbox color="secondary" [(ngModel)]="userData.six"></ion-checkbox>
+  </ion-item>
+  <ion-item style="background-color: rgb(194, 224, 238)">
+    <ion-label>ทำร้ายตนเองหรือผู้อื่น</ion-label>
+    <ion-checkbox color="secondary" [(ngModel)]="userData.seven"></ion-checkbox>
+  </ion-item>
+
+  <button ion-button color="secondary" (click)="AddActivity()">
+    บันทึกข้อมูล
+  </button>
+  <button ion-button color="danger" (click)="backhomee()">ยกเลิก</button>
+  <button ion-button (click)="gosu()">ดูผลสรุป</button>
+</ion-content>

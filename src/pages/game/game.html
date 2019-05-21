@@ -1,0 +1,402 @@
+<!--
+  Generated temion-labellate for the Gameion-labelage ion-labelage.
+
+  See httion-label://ionicframework.com/docs/comion-labelonents/#navigation for more info on
+  Ionic ion-labelages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>แบบประเมินภาวะสมองเสื่อม</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <h3>การประเมินภาวะสมองเสื่อม
+    ญาติสามารถประเมินบุคคลในครอบครัว
+    ที่มีความเสี่ยงด้วยตนเองได้</h3>
+  <h4>คำชี้แจง : ใส่เครื่องหมายหน้าข้อที่เกิดขึ้น</h4>
+  <br>
+  <ion-list radio-group (ionChange)="choose1($event)" multih2le="false">
+    <!-- <ion-list-header>
+      <h3>
+        <ion-icon> <img src="../../assets/imgs/Star.png" height="50px"></ion-icon> 1. หาของใช้ในบ้านไม่พบ
+      </h3>
+    </ion-list-header> -->
+    <ion-item>
+      <h2>
+        ข้อ 1. หาของใช้ในบ้านไม่พบ
+      </h2>
+    </ion-item>
+    <ion-item>
+      <ion-label>1.เกิดขึ้นทุกวัน</ion-label>
+      <ion-radio value="4" multiple="false"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>2.เกิดค่อนข้างบ่อยหรือเกิดทุกสัปดาห์</ion-label>
+      <ion-radio value="3" multiple="false"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>3.เกิด 1-2 ครั้ง ในระยะเวลา 1 เดือน</ion-label>
+      <ion-radio value="2" multiple="false">
+      </ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>4.เกิดนานๆ ครั้ง หรือไม่เคยเกิดขึ้นเลย</ion-label>
+
+      <ion-radio value="1" multiple="false">
+      </ion-radio>
+    </ion-item>
+  </ion-list>
+  <br>
+
+  <ion-list radio-group (ionChange)="choose2($event)">
+    <ion-list-header height="100px">
+      <h2> ข้อ 2. จำสถานที่ที่เคยไปบ่อยๆ ไม่ได้</h2>
+
+    </ion-list-header>
+    <ion-item>
+      <ion-label>1.เกิดขึ้นทุกวัน</ion-label>
+      <ion-radio value="4" ></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>2.เกิดค่อนข้างบ่อยหรือเกิดทุกสัปดาห์</ion-label>
+      <ion-radio value="3" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>3.เกิด 1-2 ครั้ง ในระยะเวลา 1 เดือน</ion-label>
+      <ion-radio value="2" s>
+      </ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>4.เกิดนานๆ ครั้ง หรือไม่เคยเกิดขึ้นเลย</ion-label>
+      <ion-radio value="1" s>
+      </ion-radio>
+    </ion-item>
+  </ion-list>
+  <br>
+
+  <ion-list radio-group (ionChange)="choose3($event)">
+    <ion-list-header height="100px">
+      <h2>ข้อ 3. ต้องกลับไปทบทวนงาน</h2>
+      <h2> แม้จะตั้งใจทำไปแล้ว</h2>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>1.เกิดขึ้นทุกวัน</ion-label>
+      <ion-radio value="4" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>2.เกิดค่อนข้างบ่อยหรือเกิดทุกสัปดาห์</ion-label>
+      <ion-radio value="3" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>3.เกิด 1-2 ครั้ง ในระยะเวลา 1 เดือน</ion-label>
+      <ion-radio value="2" s>
+      </ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>4.เกิดนานๆ ครั้ง หรือไม่เคยเกิดขึ้นเลย</ion-label>
+      <ion-radio value="1" s>
+      </ion-radio>
+    </ion-item>
+  </ion-list>
+  <br>
+
+  <ion-list radio-group (ionChange)="choose4($event)">
+    <ion-list-header>
+      <h2>ข้อ 4. ลืมของที่ตั้งใจจะนำออก</h2>
+      <h2>ไปนอกบ้านด้วย</h2>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>1.เกิดขึ้นทุกวัน</ion-label>
+      <ion-radio value="4" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>2.เกิดค่อนข้างบ่อยหรือเกิดทุกสัปดาห์</ion-label>
+      <ion-radio value="3" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>3.เกิด 1-2 ครั้ง ในระยะเวลา 1 เดือน</ion-label>
+      <ion-radio value="2" s>
+      </ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>4.เกิดนานๆ ครั้ง หรือไม่เคยเกิดขึ้นเลย</ion-label>
+      <ion-radio value="1" s>
+      </ion-radio>
+    </ion-item>
+  </ion-list>
+  <br>
+
+  <ion-list radio-group (ionChange)="choose5($event)">
+    <ion-list-header>
+      <h2> ข้อ5. ลืมเรื่องที่ได้ฟังมาเมื่อวานนี้</h2>
+      <h2>หรือเมื่อ 2-3 วันก่อน</h2>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>1.เกิดขึ้นทุกวัน</ion-label>
+      <ion-radio value="4" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>2.เกิดค่อนข้างบ่อยหรือเกิดทุกสัปดาห์</ion-label>
+      <ion-radio value="3" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>3.เกิด 1-2 ครั้ง ในระยะเวลา 1 เดือน</ion-label>
+      <ion-radio value="2" s>
+      </ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>4.เกิดนานๆ ครั้ง หรือไม่เคยเกิดขึ้นเลย</ion-label>
+      <ion-radio value="1" s>
+      </ion-radio>
+    </ion-item>
+  </ion-list>
+  <br>
+
+  <ion-list radio-group (ionChange)="choose6($event)">
+    <ion-list-header>
+      <h2>ข้อ 6. ลืมเพื่อนสนิท หรือญาติสนิท </h2>
+      <h2> หรือบุคคลที่คบหากันบ่อยๆ</h2>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>1.เกิดขึ้นทุกวัน</ion-label>
+      <ion-radio value="4" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>2.เกิดค่อนข้างบ่อยหรือเกิดทุกสัปดาห์</ion-label>
+      <ion-radio value="3" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>3.เกิด 1-2 ครั้ง ในระยะเวลา 1 เดือน</ion-label>
+      <ion-radio value="2" s>
+      </ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>4.เกิดนานๆ ครั้ง หรือไม่เคยเกิดขึ้นเลย</ion-label>
+      <ion-radio value="1" s>
+      </ion-radio>
+    </ion-item>
+  </ion-list>
+  <br>
+
+  <ion-list radio-group (ionChange)="choose7($event)">
+    <ion-list-header>
+      <h2>ข้อ 7. ไม่สามารถเข้าใจเนื้อเรื่อง</h2>
+      <h2> ในหนังสือพิมพ์หรือวารสารที่อ่าน</h2>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>1.เกิดขึ้นทุกวัน</ion-label>
+      <ion-radio value="4" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>2.เกิดค่อนข้างบ่อยหรือเกิดทุกสัปดาห์</ion-label>
+      <ion-radio value="3" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>3.เกิด 1-2 ครั้ง ในระยะเวลา 1 เดือน</ion-label>
+      <ion-radio value="2" s>
+      </ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>4.เกิดนานๆ ครั้ง หรือไม่เคยเกิดขึ้นเลย</ion-label>
+      <ion-radio value="1" s>
+      </ion-radio>
+    </ion-item>
+  </ion-list>
+  <br>
+
+  <ion-list radio-group (ionChange)="choose8($event)">
+    <ion-list-header>
+      <h2>ข้อ 8. ลืมบอกข้อความที่คนอื่น</h2>
+      <h2>วานให้มาบอกอีกคนหนึ่ง</h2>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>1.เกิดขึ้นทุกวัน</ion-label>
+      <ion-radio value="4" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>2.เกิดค่อนข้างบ่อยหรือเกิดทุกสัปดาห์</ion-label>
+      <ion-radio value="3" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>3.เกิด 1-2 ครั้ง ในระยะเวลา 1 เดือน</ion-label>
+      <ion-radio value="2" s>
+      </ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>4.เกิดนานๆ ครั้ง หรือไม่เคยเกิดขึ้นเลย</ion-label>
+      <ion-radio value="1" s>
+      </ion-radio>
+    </ion-item>
+  </ion-list>
+  <br>
+
+  <ion-list radio-group (ionChange)="choose9($event)">
+    <ion-list-header>
+      <h2>ข้อ 9. ลืมข้อมูลส่วนตัวของตนเอง </h2>
+      <h2>เช่น วันเกิด ที่อยู่</h2>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>1.เกิดขึ้นทุกวัน</ion-label>
+      <ion-radio value="4" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>2.เกิดค่อนข้างบ่อยหรือเกิดทุกสัปดาห์</ion-label>
+      <ion-radio value="3" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>3.เกิด 1-2 ครั้ง ในระยะเวลา 1 เดือน</ion-label>
+      <ion-radio value="2" s>
+      </ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>4.เกิดนานๆ ครั้ง หรือไม่เคยเกิดขึ้นเลย</ion-label>
+      <ion-radio value="1" s>
+      </ion-radio>
+    </ion-item>
+  </ion-list>
+  <br>
+
+  <ion-list radio-group (ionChange)="choose10($event)">
+    <ion-list-header>
+      <h2>ข้อ 10. สับสนรายละเอียดของ</h2>
+      <h2>เรื่องที่รับฟังมา</h2>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>1.เกิดขึ้นทุกวัน</ion-label>
+      <ion-radio value="4" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>2.เกิดค่อนข้างบ่อยหรือเกิดทุกสัปดาห์</ion-label>
+      <ion-radio value="3" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>3.เกิด 1-2 ครั้ง ในระยะเวลา 1 เดือน</ion-label>
+      <ion-radio value="2" s>
+      </ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>4.เกิดนานๆ ครั้ง หรือไม่เคยเกิดขึ้นเลย</ion-label>
+      <ion-radio value="1" s>
+      </ion-radio>
+    </ion-item>
+  </ion-list>
+  <br>
+
+  <ion-list radio-group (ionChange)="choose11($event)">
+    <ion-list-header>
+      <h2>ข้อ 11. ลืมที่ที่เคยวางสิ่งของนั้น</h2>
+      <h2>เป็นประจำหรือมองหาสิ่ง</h2>
+      <h2>ของนั้นในที่ที่ไม่น่าจะวางไว้</h2>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>1.เกิดขึ้นทุกวัน</ion-label>
+      <ion-radio value="4" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>2.เกิดค่อนข้างบ่อยหรือเกิดทุกสัปดาห์</ion-label>
+      <ion-radio value="3" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>3.เกิด 1-2 ครั้ง ในระยะเวลา 1 เดือน</ion-label>
+      <ion-radio value="2" s>
+      </ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>4.เกิดนานๆ ครั้ง หรือไม่เคยเกิดขึ้นเลย</ion-label>
+      <ion-radio value="1" s>
+      </ion-radio>
+    </ion-item>
+  </ion-list>
+  <br>
+
+  <ion-list radio-group (ionChange)="choose12($event)">
+    <ion-list-header>
+      <h2>ข้อ 12. หลงทิศ หลงทาง </h2>
+      <h2>ในที่ที่คุ้นเคย หรือที่ที่เคยไปบ่อยๆ</h2>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>1.เกิดขึ้นทุกวัน</ion-label>
+      <ion-radio value="4" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>2.เกิดค่อนข้างบ่อยหรือเกิดทุกสัปดาห์</ion-label>
+      <ion-radio value="3" s></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>3.เกิด 1-2 ครั้ง ในระยะเวลา 1 เดือน</ion-label>
+      <ion-radio value="2" >
+      </ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>4.เกิดนานๆ ครั้ง หรือไม่เคยเกิดขึ้นเลย</ion-label>
+      <ion-radio value="1" >
+      </ion-radio>
+    </ion-item>
+  </ion-list>
+  <br>
+
+  <ion-list radio-group (ionChange)="choose13($event)">
+    <ion-list-header>
+      <h2>ข้อ 13. ต้องทำกิจวัตรประจำวัน</h2>
+      <h2> บางอย่างซ้ำถึง 2 ครั้ง</h2>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>1.เกิดขึ้นทุกวัน</ion-label>
+      <ion-radio value="4" ></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>2.เกิดค่อนข้างบ่อยหรือเกิดทุกสัปดาห์</ion-label>
+      <ion-radio value="3" ></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>3.เกิด 1-2 ครั้ง ในระยะเวลา 1 เดือน</ion-label>
+      <ion-radio value="2" >
+      </ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>4.เกิดนานๆ ครั้ง หรือไม่เคยเกิดขึ้นเลย</ion-label>
+      <ion-radio value="1" >
+      </ion-radio>
+    </ion-item>
+  </ion-list>
+  <br>
+
+  <ion-list radio-group (ionChange)="choose14($event)" multiple="false">
+    <ion-list-header>
+      <h2>ข้อ 14. เล่าเรื่องเดิมซ้ำอีกครั้งซึ่ง</h2>
+      <h2>เมื่อสักครู่เพิ่งได้เล่าเสร็จ </h2>
+      <h2>หรือถามซ้ำทั้งที่เพิ่งได้รับคำตอบ</h2>
+
+    </ion-list-header>
+    <ion-item>
+      <ion-label>1.เกิดขึ้นทุกวัน</ion-label>
+      <ion-radio value="4" ></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>2.เกิดค่อนข้างบ่อยหรือเกิดทุกสัปดาห์</ion-label>
+      <ion-radio value="3" ></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>3.เกิด 1-2 ครั้ง ในระยะเวลา 1 เดือน</ion-label>
+      <ion-radio value="2" >
+      </ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>4.เกิดนานๆ ครั้ง หรือไม่เคยเกิดขึ้นเลย</ion-label>
+      <ion-radio value="1" >
+      </ion-radio>
+    </ion-item>
+  </ion-list>
+  <br>
+  <!-- <button ion-button full (click)="sumScore()" color="secondary">ส่งแบบทดสอบ</button> -->
+
+  <p class="p2"> อ้างอิง https://www.honestdocs.co/dementia-assessment-test </p>
+</ion-content>
+<ion-footer style="background-color:#86bd46">
+  <ion-buttons>
+    <button ion-button full clear (click)="sumScore()" color="light">ส่งแบบทดสอบ</button>
+  </ion-buttons>
+</ion-footer>

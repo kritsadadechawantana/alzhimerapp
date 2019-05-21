@@ -1,0 +1,32 @@
+<div class="ion-wizard-footer">
+  <ion-badge style="font-size:20px" *ngIf="showSteps">ครัวเรือนที่ {{step}} / {{steps}}</ion-badge>
+</div>
+
+<div class="ion-wizard-header">
+  <ion-fab [@btnState] *ngIf="!isOnFirstStep()" left middle>
+    <button ion-fab (click)="back()">
+      <ion-icon name="arrow-round-back"></ion-icon>
+    </button>
+
+  </ion-fab>
+  <!--Steps count-->
+
+  <!--Next Button-->
+  <ion-fab [@btnState] *ngIf="(!isOnFinalStep() && getCondition())" right middle>
+    <button ion-fab (click)="next()">
+      <ion-icon name="arrow-round-forward"></ion-icon>
+    </button>
+
+  </ion-fab>
+  <!--Finish Button-->
+  <ion-fab [@btnState] *ngIf="(isOnFinalStep() && getCondition())" right middle>
+    <button ion-fab (click)="finish.emit(step + 1)">
+      <ion-icon [name]="finishIcon"></ion-icon>
+    </button>
+
+  </ion-fab>
+</div>
+
+
+
+<ng-content></ng-content>

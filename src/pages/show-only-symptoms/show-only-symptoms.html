@@ -1,0 +1,92 @@
+<!--
+  Generated template for the ShowOnlySymptomsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header text-center>
+
+  <ion-navbar>
+    <ion-title>{{symptomsName}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+    <div *ngFor="let d of data;let i = index">
+      <div *ngIf="idSymptoms==1">
+        <ion-item #item *ngIf="d.id_symptoms==1">
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/feel.png" height="100px">
+          </ion-thumbnail>
+          <h2 class="h2"> อาการปวดหัว</h2>
+          <p class="time">เวลาที่บันทึกอาการ</p>
+          <p class="time"> เมื่อ {{date[i]}} {{d.time_symptoms}}น.</p>
+        </ion-item>
+        <ion-item-options side="right">
+          <button ion-button color="danger">
+            ลบ
+          </button>
+        </ion-item-options>
+      </div>
+      <div *ngIf="idSymptoms==2">
+        <ion-item  #item *ngIf="d.id_symptoms==2">
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/feel.png" height="100px">
+          </ion-thumbnail>
+          <h2 class="h2">อาการอาเจียน:</h2>
+          <p class="time"> เมื่อ {{date[i]}} {{d.time_symptoms}}น.</p>
+        </ion-item>
+      </div>
+      <div *ngIf="idSymptoms==3">
+        <ion-item  #item *ngIf="d.id_symptoms==3">
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/feel.png" height="100px">
+          </ion-thumbnail>
+          <h2 class="h2">ก้าวร้าว ดุดัน</h2>
+          <p class="time"> เมื่อ {{date[i]}} {{d.time_symptoms}}น.</p>
+
+        </ion-item>
+      </div>
+      <div *ngIf="idSymptoms==4">
+        <ion-item *ngIf="d.id_symptoms==4">
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/feel.png" height="100px">
+          </ion-thumbnail>
+          <h2 class="h2">ลืมชื่อ หรือ ลืมว่ากำลังทำอะไรอยู่</h2>
+          <p class="time"> เมื่อ {{date[i]}} {{d.time_symptoms}}น.</p>
+        </ion-item>
+      </div>
+      <div *ngIf="idSymptoms==5">
+        <ion-item *ngIf="d.id_symptoms==5">
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/feel.png" height="100px">
+          </ion-thumbnail>
+          <h2 class="h2">นอนไม่หลับ</h2>
+          <p class="time"> เมื่อ {{date[i]}} {{d.time_symptoms}} น.</p>
+        </ion-item>
+      </div>
+      <div *ngIf="idSymptoms==6">
+        <ion-item *ngIf="d.id_symptoms==6">
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/feel.png" height="100px">
+          </ion-thumbnail>
+          <h2 class="h2">ปัสสาวะราด</h2>
+          <p class="time"> เมื่อ {{date[i]}} {{d.time_symptoms}} น.</p>
+        </ion-item>
+      </div>
+      <div *ngIf="idSymptoms==7">
+        <ion-item *ngIf="d.id_symptoms==7">
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/feel.png" height="100px">
+          </ion-thumbnail>
+          <h2 class="h2">ทำร้ายตนเองหรือผู้อื่น</h2>
+          <p class="time"> เมื่อ {{date[i]}} {{d.time_symptoms}} น.</p>
+        </ion-item>
+      </div>
+
+    </div>
+ 
+</ion-content>

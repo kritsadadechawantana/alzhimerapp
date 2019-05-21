@@ -1,0 +1,27 @@
+page-p6 {
+    .bg-image {
+        background-image: url('assets/imgs/p6.png') ;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+  .pic{
+      padding-top: 5px;
+  }
+  .head{
+      font-size: 20px;
+  }
+  .sub{
+      color: gray;
+  }
+  p{
+    text-align: right;
+    padding-top: 5px;
+    padding-bottom: 2px;
+   }
+   .create{
+    padding-top:15px;
+    text-align: right;
+    color: black;
+    }
+}

@@ -1,0 +1,96 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>สรุปอาการ</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light" (click)="toCalendar()">
+        <ion-icon name="md-calendar"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1> สรุปอาการ </h1>
+  <div text-center>
+    <img src="assets/imgs/doctor.png" height="200px">
+  </div>
+
+  <ion-list *ngFor="let pr of data">
+    <ion-item>
+      <ion-label>เวลาบันทึกล่าสุด :
+        {{ pr.date_data }}
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>อาการปวดหัว:
+        {{ pr.list1 }}
+        ครั้ง
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>อาการอาเจียน:
+        {{ pr.list2 }}
+        ครั้ง
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ก้าวร้าว ดุดัน:
+        {{ pr.list3 }}
+        ครั้ง
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        ลืมชื่อ หรือ ลืมว่ากำลังทำอะไรอยู่:
+        {{ pr.list4 }}
+        ครั้ง
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        นอนไม่หลับ :
+        {{ pr.list5 }}
+        ครั้ง
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        ปัสสาวะราด:
+        {{ pr.list6 }}
+        ครั้ง
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        ทำร้ายตนเองหรือผู้อื่น :
+        {{ pr.list7 }}
+        ครั้ง</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-buttons text-center> 
+    <button ion-button (click)="gop2()">ตกลง</button>
+    <ion-buttons icon-end>
+      <button ion-button (click)="delActivity()" clear color="danger">เริ่มใหม่
+        <ion-icon name="md-refresh"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-buttons>
+  
+</ion-content>
+
+
+
+<ion-footer style="background-color:#86bd46">
+  <ion-buttons>
+    <button ion-button full clear color="light" (click)="alertForAddSymptoms()">บันทึกอาการ</button>
+  </ion-buttons>
+</ion-footer>

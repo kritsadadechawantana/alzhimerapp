@@ -1,0 +1,83 @@
+<!--
+  Generated template for the ShowmePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>ประวัติส่วนตัว</ion-title>
+    <ion-buttons right *ngFor="let px of data" (click)="backhome(px.name_patient,px.gender_patient,px.weight_patient,px.height_patient,
+    px.year_patient,px.hisdrug_patient,px.doc_patient,px.tel_patient,px.dis_patient,px.hos_patient,px.doctel_patient)">
+      <button ion-button icon-only clear icon-only color="light">
+        <ion-icon name="md-create" large></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div text-center>
+
+    <img src="assets/imgs/user.png" text-center color="light" height="150px" alt="">
+  </div>
+  <ion-col *ngFor="let px of data">
+
+
+    <ion-item>
+      <ion-label>ชื่อ-นามสกุล : </ion-label>
+      <ion-label>{{ px.name_patient }}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label> เพศ</ion-label>
+      <ion-label> {{ px.gender_patient }}</ion-label>
+    </ion-item>
+    <ion-item>
+        <ion-label> น้ำหนัก</ion-label>
+    <ion-label> {{ px.weight_patient }}</ion-label>
+     </ion-item> 
+
+    <ion-item>
+      <ion-label>ส่วนสูง</ion-label>
+      <ion-label> {{ px.height_patient }} เซนติเมตร</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>อายุ</ion-label>
+      <ion-label> {{ px.year_patient }} ปี</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>ประวัติการแพ้</ion-label>
+      <ion-label> {{ px.hisdrug_patient }}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>โรคประจำตัว</ion-label>
+      <ion-label> {{ px.dis_patient }}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>หมอประจำตัว</ion-label>
+      <ion-label>{{ px.doc_patient }}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>โรงพยาบาล</ion-label>
+      <ion-label>{{ px.hos_patient }}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>เบอร์หมอ </ion-label>
+      <ion-label> {{ px.doctel_patient }}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>เบอร์ญาติคนสนิท</ion-label>
+          <ion-label> {{ px.tel_patient }}</ion-label>
+    </ion-item>
+
+  </ion-col>
+  
+</ion-content>

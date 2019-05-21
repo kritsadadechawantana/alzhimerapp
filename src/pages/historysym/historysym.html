@@ -1,0 +1,118 @@
+<!--
+  Generated temion-itemlate for the HistorysymPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>ประวัติอาการผู้ป่วย</ion-title>
+    <!-- <ion-buttons end>
+      <button ion-button icon-only clear icon-end (click)="home()">
+        <ion-icon name="md-home"></ion-icon>
+      </button>
+    </ion-buttons> -->
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <!-- <ion-list>
+    <ion-item>
+      <ion-label icon-start color="danger">
+        <ion-icon name="md-time"></ion-icon>เลือกช่วงเวลา
+      </ion-label>
+      <ion-select [(ngModel)]="choose" multiple="false">
+        <ion-option *ngFor="let d of data" value="{{d.id}}">{{d.date_start}} ถึง {{d.date_stop}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list> -->
+  <div *ngFor="let d of data">
+    <div *ngIf="d.id==choose">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/calendar.png" alt="">
+        </ion-thumbnail>
+        <ion-row>
+          <div class="dateSave">วันที่วันทึกอาการ</div>
+        </ion-row>
+        <ion-row>
+          <div class="date">{{d.date_start}} ถึง {{d.date_stop}} </div>
+        </ion-row>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/feel.png" alt="">
+        </ion-thumbnail>
+        <h2>อาการปวดหัว </h2>
+        <p>จำนวน {{d.sick1}} ครั้ง</p>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/feel.png" alt="">
+        </ion-thumbnail>
+
+        <h2>อาการอาเจียน</h2>
+        <p>จำนวน {{d.sick2}} ครั้ง</p>
+
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="../../assets/imgs/feel.png" alt="">
+        </ion-thumbnail>
+        <h2>ก้าวร้าว ดุดัน</h2>
+        <p>จำนวน {{d.sick3}} ครั้ง</p>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/feel.png" alt="">
+        </ion-thumbnail>
+        <h2>ลืมชื่อ หรือ ลืมว่ากำลังทำอะไรอยู่ </h2>
+        <p>จำนวน {{d.sick4}} ครั้ง</p>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/feel.png" alt="">
+        </ion-thumbnail>
+        <h2>นอนไม่หลับ</h2>
+        <p>จำนวน {{d.sick5}} ครั้ง</p>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/feel.png" alt="">
+        </ion-thumbnail>
+        <h2> ปัสสาวะราด</h2>
+        <p>จำนวน {{d.sick6}} ครั้ง</p>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/feel.png" alt="">
+        </ion-thumbnail>
+        <h2> ทำร้ายตนเองหรือผู้อื่น </h2>
+        <p>จำนวน {{d.sick7}} ครั้ง</p>
+      </ion-item>
+    </div>
+  </div>
+
+</ion-content>
+<ion-footer style="background-color:#86bd46">
+  <ion-row>
+    <ion-col col-7>
+      <div style="background-color:#86bd46" text-center>
+        <ion-label icon-start color="light">
+          <ion-icon name="md-time"></ion-icon>เลือกช่วงเวลา
+        </ion-label>
+      </div>
+    </ion-col>
+    <ion-col col-5>
+      <div>
+        <ion-select [(ngModel)]="choose" multiple="false" color="light">
+          <ion-option *ngFor="let d of data" value="{{d.id}}">{{d.date_start}} ถึง {{d.date_stop}}
+          </ion-option>
+        </ion-select>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-footer>

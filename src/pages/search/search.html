@@ -1,0 +1,24 @@
+<!--
+  Generated template for the SearchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>ค้นหาผู้ป่วย</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color: rgb(81, 117, 158)">
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-list>
+      <ion-item *ngFor = "let item of items">
+       <h2>{{item.name_patient}}</h2> 
+       <button ion-button clear item-end (click)="Addpatient(item.id_patient)">เพิ่ม</button>
+      </ion-item>
+    </ion-list>
+</ion-content>

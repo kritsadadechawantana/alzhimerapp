@@ -1,0 +1,76 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>สรุปอาการ</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+<div text-center>
+  <h1> สรุปอาการปัจจุบัน </h1>
+  <h4 class="dateStart"> บันทึกระหว่าง {{dateLasted.day}}-{{dateLasted.month}}-{{dateLasted.year}} ถึง {{dateNow.day}}-{{dateNow.month}}-{{dateNow.year}}  </h4>
+  
+</div>
+  
+  <div text-center>
+    <img src="assets/imgs/doctor.png" height="200px">
+  </div>
+
+  <ion-list>
+
+
+    <ion-item>
+      <ion-label>อาการปวดหัว : {{sick1}} ครั้ง
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>อาการอาเจียน:{{sick2}} ครั้ง
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ก้าวร้าว ดุดัน : {{sick3}} ครั้ง
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        ลืมชื่อ หรือ ลืมว่ากำลังทำอะไรอยู่ : {{sick4}} ครั้ง
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        นอนไม่หลับ : {{sick5}} ครั้ง
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>ปัสสาวะราด : {{sick6}} ครั้ง
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>ทำร้ายตนเองหรือผู้อื่น : {{sick7}} ครั้ง</ion-label>
+    </ion-item>
+  </ion-list>
+
+
+  <div *ngIf="type_Online!=1" text-center>
+    <ion-buttons icon-end>
+      <button ion-button (click)="addDateReset()" clear color="danger">เริ่มใหม่
+        <ion-icon name="md-refresh"></ion-icon>
+      </button>
+    </ion-buttons>
+  </div>
+
+
+</ion-content>
+
+
+
+<ion-footer style="background-color:#86bd46" >
+  <ion-buttons >
+    <button ion-button full clear color="light" (click)="gotoHistoryPage()" >สรุปอาการย้อนหลัง</button>
+  </ion-buttons>
+</ion-footer>

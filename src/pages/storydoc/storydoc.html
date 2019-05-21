@@ -1,0 +1,42 @@
+<!--
+  Generated template for the StorydocPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>บทความ</ion-title>
+    <ion-buttons right (click)="creat()">
+      <button ion-button icon-only clear outline color="light">
+        <ion-icon ios="ios-add" md="md-add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <!-- <ion-item *ngFor="let xs of items" (click)="read(xs.topic,xs.detail,xs.id_story,xs.url,xs.date)"> -->
+      <ion-item *ngFor="let xs of data" (click)="read(xs.id)">
+    <ion-thumbnail item-start>
+      <img src="assets/imgs/Knowlege.png" height="200px">
+    </ion-thumbnail>
+    <h2 class="title">{{ xs.topic }}</h2>
+    <h2 class="sub">{{ xs.detail }}</h2>
+    <img src="{{ xs.url }}">
+    <!-- <img src="{{ xs.url }}" height="200px"> -->
+    <div>
+      <p class="p1">เมื่อ {{xs.date_story}} เวลา {{xs.time_story}}</p>
+      <p class="p2">กดเพื่ออ่าน</p>
+    </div>
+
+  </ion-item>
+
+
+</ion-content>
+<!-- <ion-footer style="background-color:#86bd46">
+    <button ion-button full clear color="light" (click)="creat()">เพิ่มบทความ</button>
+  </ion-footer> -->
